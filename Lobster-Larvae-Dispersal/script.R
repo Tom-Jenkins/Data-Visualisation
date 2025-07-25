@@ -22,6 +22,7 @@ library(ggspatial)
 library(vroom)
 library(dplyr)
 library(tidyr)
+library(scales)
 library(magick)
 library(grid)
 library(patchwork)
@@ -80,8 +81,9 @@ white <- "#FDFDFD"
 black <- "black"
 lightgrey <- "#F5F5F5"
 grey <- "grey20"
-palette_func = colorRampPalette(c("blue", "#007FFF", "cyan", "#7FFF7F", "yellow", "#FF7F00", "red"))
+palette_func = colorRampPalette(c("#FF13F0","purple","#0096FF","cyan", "#7FFF7F", "yellow", "#FF7F00", "red"))
 site_cols <- palette_func(length(release_sites$Release_sites))
+show_col(site_cols)
 
 # Bounding box
 bbox <- st_bbox(c(xmin = -11, xmax = 7, ymin = 48.5, ymax = 56), crs = st_crs(4326)) |> 
