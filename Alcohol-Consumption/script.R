@@ -22,6 +22,8 @@ library(rnaturalearth)
 library(rnaturalearthdata)
 library(sf)
 library(patchwork)
+
+# Font setup
 library(showtext)
 font_add_google("Roboto", "roboto")
 showtext_auto()
@@ -91,7 +93,7 @@ bbox <- st_bbox(c(xmin = -120, xmax = 155, ymin = -50, ymax = 80), crs = st_crs(
   st_transform("ESRI:54030")
 
 # TJ Data Visualisation logo in SVG format
-logo <- image_read_svg("../Misc/logo-darkblue.svg")
+logo <- image_read_svg("../misc/logo-darkblue.svg")
 logo_grob <- rasterGrob(logo, interpolate = TRUE)
 
 # Theme
