@@ -1,6 +1,6 @@
 # ============================ #
 #
-# UK / Europe Measles Cases Jan 2020 – Jun 2025
+# UK Measles Cases Jan 2020 – Jun 2025
 #
 # Data from Tidy Tuesday:
 # https://github.com/rfordatascience/tidytuesday
