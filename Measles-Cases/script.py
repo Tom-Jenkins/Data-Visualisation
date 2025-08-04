@@ -134,4 +134,4 @@ ax.text(x=1, y=-0.20, s="Note: Provisional monthly data obtained on 2025-06-12",
 # Show or Save plot
 plt.tight_layout()
 # plt.show()
-plt.savefig("Measles_cases_uk.jpeg", dpi=300, bbox_inches="tight")
+plt.savefig("Measles_cases_uk.png", dpi=300, bbox_inches="tight")
