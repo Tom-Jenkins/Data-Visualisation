@@ -4,9 +4,9 @@
 
 ## Table of Contents
 
-- [Lobster Larvae Dispersal](#lobster-dispersal)
-- [Europe Alcohol Consumption](#alcohol-consumption)
-- [UK Measles Cases](#measles-cases)
+- [Lobster Larvae Dispersal](#lobster-larvae-dispersal)
+- [Europe Alcohol Consumption](#europe-alcohol-consumption)
+- [UK Measles Cases](#uk-measles-cases)
 
 ## Lobster Larvae Dispersal
 
