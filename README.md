@@ -20,9 +20,9 @@
 > Programming: R  
 > Main package: `ggplot2`
 
-<img src="Alcohol-Consumption/Graphic_beer.png" width="49%" />
-<img src="Alcohol-Consumption/Graphic_spirits.png" width="49%" />
-<img src="Alcohol-Consumption/Graphic_wine.png" width="49%" />
+<img src="Alcohol-Consumption/Graphic_beer.png" />
+<img src="Alcohol-Consumption/Graphic_spirits.png" />
+<img src="Alcohol-Consumption/Graphic_wine.png" />
 
 ## UK Measles Cases
 
