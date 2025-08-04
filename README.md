@@ -18,7 +18,7 @@
 ## Europe Alcohol Consumption
 
 > Programming: R  
-> Main package: `ggplot2`
+> Main package: `ggplot2` and `rnaturalearth`
 
 <img src="Alcohol-Consumption/Graphic_beer.png" />
 <img src="Alcohol-Consumption/Graphic_spirits.png" />
