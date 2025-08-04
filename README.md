@@ -15,6 +15,8 @@
 
 <img src="Lobster-Larvae-Dispersal/Dispersal.gif"/>
 
+[Back to Contents](#table-of-contents)
+
 ## Europe Alcohol Consumption
 
 > Programming: R  
@@ -24,9 +26,13 @@
 <img src="Alcohol-Consumption/Graphic_spirits.png" />
 <img src="Alcohol-Consumption/Graphic_wine.png" />
 
+[Back to Contents](#table-of-contents)
+
 ## UK Measles Cases
 
 > Programming: Python  
 > Main libraries: `Matplotlib` and `Seaborn`
 
 <img src="Measles-Cases/Measles_cases_uk.png" />
+
+[Back to Contents](#table-of-contents)
