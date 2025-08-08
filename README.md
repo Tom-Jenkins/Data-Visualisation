@@ -5,7 +5,7 @@
 ## Table of Contents
 
 - [Lobster Larvae Dispersal](#lobster-larvae-dispersal)
-- [Europe Alcohol Consumption](#europe-alcohol-consumption)
+- [Global Alcohol Consumption](#global-alcohol-consumption)
 - [UK Measles Cases](#uk-measles-cases)
 
 ## Lobster Larvae Dispersal
@@ -17,7 +17,7 @@
 
 [Back to Contents](#table-of-contents)
 
-## Europe Alcohol Consumption
+## Global Alcohol Consumption
 
 > Programming: R  
 > Main packages: `ggplot2` and `rnaturalearth`
