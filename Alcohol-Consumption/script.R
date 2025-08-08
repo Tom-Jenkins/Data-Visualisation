@@ -146,14 +146,14 @@ beer_img <- image_read("Beer.png")
 beer_img_grob <- rasterGrob(beer_img, interpolate = TRUE)
 
 # Overlay beer image at bottom-left
-(beer_plt_2 <- beer_plt_1+
-    inset_element(
-      p = beer_img_grob,
-      left = 0.04, right = 0.09,
-      bottom = 0.16, top = 0.26,
-      align_to = "full"
-    )
-)
+# (beer_plt_2 <- beer_plt_1+
+#     inset_element(
+#       p = beer_img_grob,
+#       left = 0.04, right = 0.09,
+#       bottom = 0.16, top = 0.26,
+#       align_to = "full"
+#     )
+# )
 
 # Save graphic
 ggsave("Graphic_beer.png", dpi = 600)
@@ -192,14 +192,14 @@ wine_img <- image_read("Wine.jpg")
 wine_img_grob <- rasterGrob(wine_img, interpolate = TRUE)
 
 # Overlay wine image at bottom-left
-(wine_plt_2 <- wine_plt_1+
-    inset_element(
-      p = wine_img_grob,
-      left = 0.04, right = 0.09,
-      bottom = 0.16, top = 0.26,
-      align_to = "full"
-    )
-)
+# (wine_plt_2 <- wine_plt_1+
+#     inset_element(
+#       p = wine_img_grob,
+#       left = 0.04, right = 0.09,
+#       bottom = 0.16, top = 0.26,
+#       align_to = "full"
+#     )
+# )
 
 # Save graphic
 ggsave("Graphic_wine.png", dpi = 600)
@@ -238,14 +238,14 @@ spirits_img <- image_read("Spirit.jpg")
 spirits_img_grob <- rasterGrob(spirits_img, interpolate = TRUE)
 
 # Overlay spirits image at bottom-left
-(spirits_plt_2 <- spirits_plt_1+
-    inset_element(
-      p = spirits_img_grob,
-      left = 0.04, right = 0.09,
-      bottom = 0.16, top = 0.26,
-      align_to = "full"
-    )
-)
+# (spirits_plt_2 <- spirits_plt_1+
+#     inset_element(
+#       p = spirits_img_grob,
+#       left = 0.04, right = 0.09,
+#       bottom = 0.16, top = 0.26,
+#       align_to = "full"
+#     )
+# )
 
 # Save graphic
 ggsave("Graphic_spirits.png", dpi = 600)
