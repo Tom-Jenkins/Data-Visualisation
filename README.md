@@ -22,9 +22,9 @@
 > Programming: R  
 > Main packages: `ggplot2` and `rnaturalearth`
 
-<img src="Alcohol-Consumption/Graphic_beer.png" />
-<img src="Alcohol-Consumption/Graphic_spirits.png" />
-<img src="Alcohol-Consumption/Graphic_wine.png" />
+<img src="Alcohol-Consumption/Beer_graphic.png" />
+<img src="Alcohol-Consumption/Wine_graphic.png" />
+<img src="Alcohol-Consumption/Spirit_graphic.png" />
 
 [Back to Contents](#table-of-contents)
 

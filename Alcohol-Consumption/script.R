@@ -243,13 +243,18 @@ spirits_img_grob <- rasterGrob(spirits_img, interpolate = TRUE)
 # Export Graphics
 # ---------- #
 
+# Output file names
+beer_output_png <- "Beer_graphic.png"
+wine_output_png <- "Wine_graphic.png"
+spirit_output_png <- "Spirit_graphic.png"
+
 # Save graphics
-ggsave("Graphic_beer.png", plot = beer_plt_1, dpi = 600)
-ggsave("Graphic_beer.png", plot = beer_plt_1, dpi = 600)
-ggsave("Graphic_wine.png", plot = wine_plt_1, dpi = 600)
-ggsave("Graphic_wine.png", plot = wine_plt_1, dpi = 600)
-ggsave("Graphic_spirits.png", plot = spirits_plt_1, dpi = 600)
-ggsave("Graphic_spirits.png", plot = spirits_plt_1, dpi = 600)
+ggsave(beer_output_png, plot = beer_plt_1, dpi = 600)
+ggsave(beer_output_png, plot = beer_plt_1, dpi = 600)
+ggsave(wine_output_png, plot = wine_plt_1, dpi = 600)
+ggsave(wine_output_png, plot = wine_plt_1, dpi = 600)
+ggsave(spirit_output_png, plot = spirits_plt_1, dpi = 600)
+ggsave(spirit_output_png, plot = spirits_plt_1, dpi = 600)
 
 # Crop unecessary whitespace from images
 crop_image <- function (image_path) {
@@ -259,5 +264,5 @@ crop_image <- function (image_path) {
     image_border(color = "white", geometry = "10x10") |>
     image_write(image_path, density = "600x600")
 }
-images <- c("Graphic_beer.png", "Graphic_wine.png", "Graphic_spirits.png")
+images <- c(beer_output_png, wine_output_png, spirit_output_png)
 lapply(images, FUN = crop_image)
