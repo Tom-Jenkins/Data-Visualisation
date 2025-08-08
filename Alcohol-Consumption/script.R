@@ -257,7 +257,7 @@ crop_image <- function (image_path) {
     image_read() |> 
     image_trim() |> 
     image_border(color = "white", geometry = "10x10") |>
-    image_write("Graphic_beer.png", density = "600x600")
+    image_write(image_path, density = "600x600")
 }
 images <- c("Graphic_beer.png", "Graphic_wine.png", "Graphic_spirits.png")
 lapply(images, FUN = crop_image)
