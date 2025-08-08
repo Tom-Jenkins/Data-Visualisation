@@ -98,7 +98,7 @@ logo_grob <- rasterGrob(logo, interpolate = TRUE)
 
 # Theme
 maptheme <- theme(
-  text = element_text(family = "roboto"), 
+  text = element_text(family = "roboto"),
   panel.background = element_roundrect(fill = grey),
   panel.grid.major = element_line(linewidth = 0.2),
   axis.text = element_blank(),
@@ -110,7 +110,7 @@ maptheme <- theme(
   legend.text = element_text(size = 40),
   legend.title = element_text(size = 45),
   legend.key.size = unit(15, "pt"),
-  plot.margin = unit(c(l = 0, r = 0, b = 0, t = 0), "pt")
+  plot.margin = unit(c(l = 5, r = 5, b = 5, t = 5), "pt"),
 )
 
 # ---------- #
@@ -146,18 +146,14 @@ beer_img <- image_read("Beer.png")
 beer_img_grob <- rasterGrob(beer_img, interpolate = TRUE)
 
 # Overlay beer image at bottom-left
-# (beer_plt_2 <- beer_plt_1+
-#     inset_element(
-#       p = beer_img_grob,
-#       left = 0.04, right = 0.09,
-#       bottom = 0.16, top = 0.26,
-#       align_to = "full"
-#     )
-# )
-
-# Save graphic
-ggsave("Graphic_beer.png", dpi = 600)
-#
+(beer_plt_2 <- beer_plt_1+
+    inset_element(
+      p = beer_img_grob,
+      left = 0.04, right = 0.09,
+      bottom = 0.16, top = 0.26,
+      align_to = "full"
+    )
+)
 
 # ---------- #
 # Wine Map
@@ -192,21 +188,17 @@ wine_img <- image_read("Wine.jpg")
 wine_img_grob <- rasterGrob(wine_img, interpolate = TRUE)
 
 # Overlay wine image at bottom-left
-# (wine_plt_2 <- wine_plt_1+
-#     inset_element(
-#       p = wine_img_grob,
-#       left = 0.04, right = 0.09,
-#       bottom = 0.16, top = 0.26,
-#       align_to = "full"
-#     )
-# )
-
-# Save graphic
-ggsave("Graphic_wine.png", dpi = 600)
-#
+(wine_plt_2 <- wine_plt_1+
+    inset_element(
+      p = wine_img_grob,
+      left = 0.04, right = 0.09,
+      bottom = 0.16, top = 0.26,
+      align_to = "full"
+    )
+)
 
 # ---------- #
-# Wine Map
+# Spirit Map
 # ---------- #
 
 # Country with highest consumption
@@ -238,15 +230,34 @@ spirits_img <- image_read("Spirit.jpg")
 spirits_img_grob <- rasterGrob(spirits_img, interpolate = TRUE)
 
 # Overlay spirits image at bottom-left
-# (spirits_plt_2 <- spirits_plt_1+
-#     inset_element(
-#       p = spirits_img_grob,
-#       left = 0.04, right = 0.09,
-#       bottom = 0.16, top = 0.26,
-#       align_to = "full"
-#     )
-# )
+(spirits_plt_2 <- spirits_plt_1+
+    inset_element(
+      p = spirits_img_grob,
+      left = 0.04, right = 0.09,
+      bottom = 0.16, top = 0.26,
+      align_to = "full"
+    )
+)
 
-# Save graphic
-ggsave("Graphic_spirits.png", dpi = 600)
-#
+# ---------- #
+# Export Graphics
+# ---------- #
+
+# Save graphics
+ggsave("Graphic_beer.png", plot = beer_plt_1, dpi = 600)
+ggsave("Graphic_beer.png", plot = beer_plt_1, dpi = 600)
+ggsave("Graphic_wine.png", plot = wine_plt_1, dpi = 600)
+ggsave("Graphic_wine.png", plot = wine_plt_1, dpi = 600)
+ggsave("Graphic_spirits.png", plot = spirits_plt_1, dpi = 600)
+ggsave("Graphic_spirits.png", plot = spirits_plt_1, dpi = 600)
+
+# Crop unecessary whitespace from images
+crop_image <- function (image_path) {
+  image_path |>
+    image_read() |> 
+    image_trim() |> 
+    image_border(color = "white", geometry = "10x10") |>
+    image_write("Graphic_beer.png", density = "600x600")
+}
+images <- c("Graphic_beer.png", "Graphic_wine.png", "Graphic_spirits.png")
+lapply(images, FUN = crop_image)
